@@ -1,5 +1,5 @@
 package pEnsemble;
 
-public class Litteal {
+public class Litteral {
 }
 //Litteral, maybe a dupplicate of ExprArith::=Litteral
