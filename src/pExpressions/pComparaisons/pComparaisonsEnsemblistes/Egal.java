@@ -1,5 +1,5 @@
 package pExpressions.pComparaisons.pComparaisonsEnsemblistes;
 
-public class NotEqual extends ComparaisonEnsembliste {
+public class Egal extends ComparaisonEnsembliste {
 
 }
