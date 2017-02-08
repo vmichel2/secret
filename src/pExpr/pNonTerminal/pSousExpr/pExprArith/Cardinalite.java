@@ -1,6 +1,6 @@
 package pExpr.pNonTerminal.pSousExpr.pExprArith;
 
-public class Cardinalite {
+public class Cardinalite extends ExprArith{
 }
 
 //card(Ensemble)

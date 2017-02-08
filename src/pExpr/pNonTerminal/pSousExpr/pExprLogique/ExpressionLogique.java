@@ -1,8 +1,8 @@
 package pExpr.pNonTerminal.pSousExpr.pExprLogique;
 
-import pExpr.Expression;
+import pExpr.pNonTerminal.NonTerminal;
 
-public class ExpressionLogique extends Expression {
+public class ExpressionLogique extends NonTerminal {
 }
 /*
 ExprLogique	::=	Expr ? Expr

@@ -1,8 +1,8 @@
 package pExpr.pNonTerminal.pSousExpr.pExprEnsembliste;
 
-import pExpr.Expression;
+import pExpr.pNonTerminal.NonTerminal;
 
-public class ExpressionEnsembliste extends Expression {
+public class ExpressionEnsembliste extends NonTerminal {
 }
 /*
 ExprEnsembliste	::=	Element ? Ensemble
