@@ -1,6 +1,5 @@
-package pNonTerminal.pEnsemble;
+package pEnsemble;
 
 public class EnsembleEnExtension extends Ensemble {
 }
 
-//

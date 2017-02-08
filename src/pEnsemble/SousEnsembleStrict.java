@@ -1,4 +1,4 @@
-package pNonTerminal.pEnsemble;
+package pEnsemble;
 
 public class SousEnsembleStrict extends Ensemble {
 }
