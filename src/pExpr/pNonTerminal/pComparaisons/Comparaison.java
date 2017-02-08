@@ -1,6 +1,8 @@
 package pExpr.pNonTerminal.pComparaisons;
 
-public class Comparaison {
+import pExpr.pNonTerminal.NonTerminal;
+
+public class Comparaison extends NonTerminal {
 }
 /*
 Comparaison	::=	ComparaisonArithm�tique
