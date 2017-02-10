@@ -10,5 +10,12 @@ public class Moins extends ExprArith {
         this.expr2=expr2;
 
     }
+
+    public void afficher(String prefixe) {
+
+        System.out.println(prefixe + "Moins");
+        expr.afficher(prefixe+"\t");
+        expr2.afficher(prefixe+"\t");
+    }
 }
 //ExprArith - ExprArith

@@ -9,5 +9,12 @@ public class Plus extends ExprArith {
         super(expr);
         this.expr2=expr2;
     }
+
+    public void afficher(String prefixe) {
+
+        System.out.println(prefixe + "Plus");
+        expr.afficher(prefixe+"\t");
+        expr2.afficher(prefixe+"\t");
+    }
 }
 //ExprArith + ExprArith

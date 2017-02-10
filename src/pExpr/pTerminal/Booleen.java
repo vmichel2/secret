@@ -1,10 +1,17 @@
 package pExpr.pTerminal;
 
 public class Booleen extends Terminal {
-    private boolean b;
-    public Booleen(boolean b){
-        this.b=b;
+
+    private boolean booleen;
+
+    public Booleen(boolean booleen) {
+        this.booleen=booleen;
     }
+
+    public void afficher(String prefixe) {
+        System.out.println(prefixe + "Booléen : " + this.booleen);
+    }
+
 }
-// booleen
+
 

@@ -9,6 +9,7 @@ public class ExpressionLogique extends NonTerminal {
         this.expr=expr;
     }
 
+    public void afficher(String prefixe) { }
 }
 /*
 ExprLogique	::=	Expr ? Expr

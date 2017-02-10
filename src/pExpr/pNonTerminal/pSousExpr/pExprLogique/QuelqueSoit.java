@@ -11,5 +11,14 @@ public class QuelqueSoit extends ExpressionLogique {
         this.expr3=expr3;
     }
 
+    public void afficher(String prefixe) {
+
+        System.out.println(prefixe + "QuelqueSoit");
+        expr.afficher(prefixe+"\t");
+        expr2.afficher(prefixe+"\t");
+        expr3.afficher(prefixe+"\t");
+
+    }
+
 }
 //(? Litt�ral . ExprEnsembliste ? Expr )

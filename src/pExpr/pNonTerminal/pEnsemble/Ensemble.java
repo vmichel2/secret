@@ -8,6 +8,15 @@ public class Ensemble extends NonTerminal {
     public Ensemble(Expression... expr){
         ensemble=expr;
     }
+
+    public void afficher(String prefixe) {
+
+        System.out.println(prefixe + "Ensemble");
+        for (Expression expr : ensemble) {
+            expr.afficher(prefixe+"\t");
+        }
+
+    }
 }
 
 // Ensemble	::=	{ ExprArith (, ExprArith)* }

@@ -10,6 +10,13 @@ public class ExpressionEnsembliste extends NonTerminal {
         this.expr=expr;
         this.expr2=expr;
     }
+
+    public void afficher(String prefixe) {
+
+        System.out.println(prefixe + "Expression ensembliste");
+        expr.afficher(prefixe+"\t");
+        expr2.afficher(prefixe+"\t");
+    }
 }
 /*
 ExprEnsembliste	::=	Element ? Ensemble

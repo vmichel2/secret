@@ -8,5 +8,13 @@ public class Etlogique extends ExpressionLogique{
         super(expr);
         this.expr2=expr2;
     }
+
+    public void afficher(String prefixe) {
+
+        System.out.println(prefixe + "EtLogique");
+        expr.afficher(prefixe+"\t");
+        expr2.afficher(prefixe+"\t");
+    }
+
 }
 //Expr ? Expr

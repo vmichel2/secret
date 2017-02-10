@@ -9,4 +9,5 @@ public class ExprArith extends NonTerminal {
         this.expr=expr;
     }
 
+    public void afficher(String prefixe) { }
 }

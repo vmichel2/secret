@@ -10,6 +10,8 @@ public class Comparaison extends NonTerminal {
         this.exprg=exprg;
         this.exprd=exprd;
     }
+    public void afficher(String prefixe) { }
+
 }
 
 /*
