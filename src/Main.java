@@ -9,7 +9,7 @@ import pExpr.pTerminal.Entier;
 import pExpr.pTerminal.Litteral;
 
 public class Main {
-    public void main (String args[]){
+    public static void main (String args[]){
         Litteral x = new Litteral("x");
         Litteral X = new Litteral("X");
         Expression exemple1 = new Etlogique(
