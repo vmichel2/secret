@@ -6,6 +6,7 @@ import pExpr.pNonTerminal.pSousExpr.pExprArith.Cardinalite;
 import pExpr.pNonTerminal.pSousExpr.pExprEnsembliste.AppartientA;
 import pExpr.pNonTerminal.pSousExpr.pExprLogique.Etlogique;
 import pExpr.pNonTerminal.pSousExpr.pExprLogique.IlExiste;
+import pExpr.pNonTerminal.pSousExpr.pExprLogique.Oulogique;
 import pExpr.pNonTerminal.pSousExpr.pExprLogique.QuelqueSoit;
 import pExpr.pTerminal.Entier;
 import pExpr.pTerminal.Litteral;
@@ -24,6 +25,18 @@ public class Main {
         Expression exemple2 = new Etlogique(
                 new Egalite(Y, new Ensemble(new Entier(4), new Entier(5), new Entier(6))),
                 new IlExiste(Z, new Ensemble(Z, Y), new Egalite(new Cardinalite(Z), new Entier(3))));
+
+        Litteral a = new Litteral("x");
+        Litteral A = new Litteral("X");
+        Expression exemple3 = new Etlogique(
+                new Egalite(X, new Ensemble(new Entier(1), new Entier(2), new Entier(3))),
+                new IlExiste(x, new AppartientA(x, X), new Egalite(new Cardinalite(x), new Entier(1))));
+
+        Litteral Q = new Litteral("X");
+        Expression exemple4 = new Oulogique(
+                new Egalite(X, new Ensemble()),
+                new Ensemble(new Entier(1), new Entier(2), new Entier(3))
+        );
 
     }
 }
