@@ -1,6 +1,7 @@
 package pExpr.pNonTerminal.pEnsemble;
 import pExpr.Expression;
 import pExpr.pNonTerminal.NonTerminal;
+import pExpr.pTerminal.Litteral;
 
 
 public abstract class Ensemble extends NonTerminal {

@@ -8,6 +8,7 @@ public class ComparaisonArithmetique extends Comparaison {
         super(exprg, exprd);
     }
 }
+
 /*
 ComparaisonArithm�tique	::=	ExprArith = ExprArith
 |	ExprArith ? ExprArith
