@@ -2,18 +2,28 @@ import pExpr.Expression;
 import pExpr.pNonTerminal.pComparaisons.pComparaisonArithmetique.Egalite;
 import pExpr.pNonTerminal.pComparaisons.pComparaisonArithmetique.Plusgrandque;
 import pExpr.pNonTerminal.pEnsemble.Ensemble;
+import pExpr.pNonTerminal.pSousExpr.pExprArith.Cardinalite;
 import pExpr.pNonTerminal.pSousExpr.pExprEnsembliste.AppartientA;
 import pExpr.pNonTerminal.pSousExpr.pExprLogique.Etlogique;
+import pExpr.pNonTerminal.pSousExpr.pExprLogique.IlExiste;
 import pExpr.pNonTerminal.pSousExpr.pExprLogique.QuelqueSoit;
 import pExpr.pTerminal.Entier;
 import pExpr.pTerminal.Litteral;
 
 public class Main {
-    public static void main (String args[]){
+    public static void main(String args[]) {
         Litteral x = new Litteral("x");
         Litteral X = new Litteral("X");
         Expression exemple1 = new Etlogique(
                 new Egalite(X, new Ensemble(new Entier(1), new Entier(2), new Entier(3))),
                 new QuelqueSoit(x, new AppartientA(x, X), new Plusgrandque(x, new Entier(0))));
+
+
+        Litteral Y = new Litteral("Y");
+        Litteral Z = new Litteral("Z");
+        Expression exemple2 = new Etlogique(
+                new Egalite(Y, new Ensemble(new Entier(4), new Entier(5), new Entier(6))),
+                new IlExiste(Z, new Ensemble(Z, Y), new Egalite(new Cardinalite(Z), new Entier(3))));
+
     }
 }
