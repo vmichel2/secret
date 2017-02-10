@@ -3,7 +3,7 @@ package pExpr.pNonTerminal.pSousExpr.pExprLogique;
 import pExpr.Expression;
 import pExpr.pNonTerminal.NonTerminal;
 
-public class ExpressionLogique extends NonTerminal {
+public abstract class ExpressionLogique extends NonTerminal {
     protected Expression expr;
     public ExpressionLogique(Expression expr){
         this.expr=expr;
@@ -20,4 +20,3 @@ ExprLogique	::=	Expr ? Expr
 |	true
 |	false
  */
-//ToDo builder
