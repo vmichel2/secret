@@ -8,8 +8,6 @@ public abstract class ExpressionLogique extends NonTerminal {
     public ExpressionLogique(Expression expr){
         this.expr=expr;
     }
-
-    public void afficher(String prefixe) { }
 }
 /*
 ExprLogique	::=	Expr ? Expr
