@@ -20,6 +20,8 @@ public class PrettyPrinter implements Visiteur {
 
     @Override
     public Object visit(Litteral litteral) {
+        // some starting point
+        System.out.println(litteral.getLitteral());
         return null;
     }
 
