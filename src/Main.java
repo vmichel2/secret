@@ -58,4 +58,10 @@ public class Main {
         System.out.println();
 
     }
+
+    /*
+    Todo : Visiteur pretty-printer
+    Todo : Visiteur vérificateur
+    Todo : Visiteur évaluateur
+     */
 }
