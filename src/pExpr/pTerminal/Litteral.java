@@ -8,7 +8,6 @@ public class Litteral extends Terminal {
         this.litteral=litteral;
     }
 
-
     public void afficher(String prefixe) {
         System.out.println(prefixe + "Litteral : " + this.litteral);
     }
