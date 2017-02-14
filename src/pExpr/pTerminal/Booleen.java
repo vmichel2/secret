@@ -10,6 +10,10 @@ public class Booleen extends Terminal {
         this.booleen=booleen;
     }
 
+    public boolean isBooleen() {
+        return booleen;
+    }
+
     public Object Accepte (Visiteur v){
         return v.visit(this);
     }

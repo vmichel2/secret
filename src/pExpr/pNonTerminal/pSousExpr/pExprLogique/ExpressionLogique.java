@@ -8,6 +8,10 @@ public abstract class ExpressionLogique extends NonTerminal {
     public ExpressionLogique(Expression expr){
         this.expr=expr;
     }
+
+    public Expression getExpr() {
+        return expr;
+    }
 }
 
 /*

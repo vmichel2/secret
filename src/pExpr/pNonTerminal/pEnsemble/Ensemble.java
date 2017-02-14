@@ -11,6 +11,10 @@ public class Ensemble extends NonTerminal {
     }
 
 
+    public Expression[] getEnsemble() {
+        return ensemble;
+    }
+
     public Object Accepte (Visiteur v){
         return v.visit(this);
     }

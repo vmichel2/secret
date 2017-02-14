@@ -12,6 +12,10 @@ public class Moins extends ExprArith {
 
     }
 
+    public Expression getExpr2() {
+        return expr2;
+    }
+
     public Object Accepte (Visiteur v){
         return v.visit(this);
     }

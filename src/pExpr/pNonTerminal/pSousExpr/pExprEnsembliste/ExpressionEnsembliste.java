@@ -17,6 +17,14 @@ public abstract class ExpressionEnsembliste extends NonTerminal {
         expr.afficher(prefixe+"\t");
         expr2.afficher(prefixe+"\t");
     }
+
+    public Expression getExpr() {
+        return expr;
+    }
+
+    public Expression getExpr2() {
+        return expr2;
+    }
 }
 /*
 ExprEnsembliste	::=	Element ? Ensemble

@@ -10,6 +10,10 @@ public class Entier extends Terminal {
         this.entier=entier;
     }
 
+    public int getEntier() {
+        return entier;
+    }
+
     public Object Accepte (Visiteur v){
         return v.visit(this);
     }

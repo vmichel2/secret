@@ -13,6 +13,15 @@ public class QuelqueSoit extends ExpressionLogique {
     }
 
 
+    public Expression getExpr3() {
+        return expr3;
+    }
+
+    public Expression getExpr2() {
+
+        return expr2;
+    }
+
     public Object Accepte (Visiteur v){
         return v.visit(this);
     }

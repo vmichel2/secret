@@ -13,6 +13,14 @@ public class IlExiste extends ExpressionLogique {
         this.expr3=expr3;
     }
 
+    public Expression getExpr2() {
+        return expr2;
+    }
+
+    public Expression getExpr3() {
+        return expr3;
+    }
+
     public Object Accepte (Visiteur v){
         return v.visit(this);
     }

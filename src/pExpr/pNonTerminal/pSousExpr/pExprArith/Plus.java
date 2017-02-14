@@ -11,6 +11,10 @@ public class Plus extends ExprArith {
         this.expr2=expr2;
     }
 
+    public Expression getExpr2() {
+        return expr2;
+    }
+
     public Object Accepte (Visiteur v){
         return v.visit(this);
     }
