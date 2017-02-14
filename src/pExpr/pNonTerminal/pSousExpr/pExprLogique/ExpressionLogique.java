@@ -9,6 +9,7 @@ public abstract class ExpressionLogique extends NonTerminal {
         this.expr=expr;
     }
 }
+
 /*
 ExprLogique	::=	Expr ? Expr
 |	Expr ? Expr

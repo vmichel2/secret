@@ -1,6 +1,7 @@
 package pExpr.pNonTerminal.pSousExpr.pExprLogique;
 
 import pExpr.Expression;
+import pVisiteurs.Visiteur;
 
 public class QuelqueSoit extends ExpressionLogique {
     protected Expression expr2;
@@ -9,6 +10,11 @@ public class QuelqueSoit extends ExpressionLogique {
         super(expr);
         this.expr2=expr2;
         this.expr3=expr3;
+    }
+
+
+    public Object Accepte (Visiteur v){
+        return v.visit(this);
     }
 
     public void afficher(String prefixe) {
