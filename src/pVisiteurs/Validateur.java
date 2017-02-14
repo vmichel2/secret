@@ -16,6 +16,8 @@ import pExpr.pTerminal.Entier;
 import pExpr.pTerminal.Litteral;
 
 public class Validateur implements Visiteur {
+    //Todo : Fill ALL the methods
+
     @Override
     public Object visit(Litteral litteral) {
         return null;
