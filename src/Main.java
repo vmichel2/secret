@@ -60,7 +60,11 @@ public class Main {
         System.out.println();
 
         Visiteur v = new Validateur();
-        exemple1.Accepte(v, new Object());
+        System.out.println(exemple1.Accepte(v, new Object()));
+        System.out.println(exemple2.Accepte(v, new Object()));
+        System.out.println(exemple3.Accepte(v, new Object()));
+        System.out.println(exemple4.Accepte(v, new Object()));
+
 
     }
 

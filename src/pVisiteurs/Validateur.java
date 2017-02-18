@@ -57,7 +57,7 @@ public class Validateur implements Visiteur {
     //Todo
     @Override
     public Object visit(IlExiste ilExiste, Object data) {
-        return null;
+        return "booleen";
     }
 
     @Override
@@ -82,7 +82,7 @@ public class Validateur implements Visiteur {
     //Todo
     @Override
     public Object visit(QuelqueSoit quelqueSoit, Object data) {
-        return null;
+        return "booleen";
     }
 
 
@@ -186,11 +186,12 @@ public class Validateur implements Visiteur {
 
     @Override
     public Object visit(Egalite egalite, Object data) {
-        ArrayList intorstr= new ArrayList<String>();
-        intorstr.add("litteral");
-        intorstr.add("entier");
-        if(intorstr.contains(egalite.getExprg().Accepte(this,data)) &&
-                intorstr.contains(egalite.getExprd().Accepte(this,data))){
+        ArrayList intorstrorens= new ArrayList<String>();
+        intorstrorens.add("litteral");
+        intorstrorens.add("entier");
+        intorstrorens.add("ensemble");
+        if(egalite.getExprg().Accepte(this,data)=="litteral" &&
+           intorstrorens.contains(egalite.getExprd().Accepte(this,data))){
             return "booleen";
         }
         return "ERROR";
