@@ -10,12 +10,12 @@ public class Booleen extends Terminal {
         this.booleen=booleen;
     }
 
-    public boolean isBooleen() {
+    public boolean getBooleen() {
         return booleen;
     }
 
-    public Object Accepte (Visiteur v){
-        return v.visit(this);
+    public Object Accepte (Visiteur v, Object data){
+        return v.visit(this, data);
     }
     public void afficher(String prefixe) {
         System.out.println(prefixe + "Booléen : " + this.booleen);

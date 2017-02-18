@@ -10,8 +10,8 @@ public class Egalite extends ComparaisonArithmetique {
     }
 
 
-    public Object Accepte (Visiteur v){
-        return v.visit(this);
+    public Object Accepte (Visiteur v, Object data){
+        return v.visit(this, data);
     }
 
     public void afficher(String prefixe) {

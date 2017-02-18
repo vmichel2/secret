@@ -16,49 +16,49 @@ import pExpr.pTerminal.Entier;
 import pExpr.pTerminal.Litteral;
 
 public interface Visiteur {
-    Object visit(Litteral litteral);
+    Object visit(Litteral litteral, Object data);
 
-    Object visit(Entier entier);
+    Object visit(Entier entier, Object data);
 
-    Object visit(Booleen booleen);
+    Object visit(Booleen booleen, Object data);
 
-    Object visit(Etlogique etlogique);
+    Object visit(Etlogique etlogique, Object data);
 
-    Object visit(IlExiste ilExiste);
+    Object visit(IlExiste ilExiste, Object data);
 
-    Object visit(Non non);
+    Object visit(Non non, Object data);
 
-    Object visit(Oulogique oulogique);
+    Object visit(Oulogique oulogique, Object data);
 
-    Object visit(QuelqueSoit quelqueSoit);
+    Object visit(QuelqueSoit quelqueSoit, Object data);
 
-    Object visit(InclusStricteDans inclusStricteDans);
+    Object visit(InclusStricteDans inclusStricteDans, Object data);
 
-    Object visit(InclusDans inclusDans);
+    Object visit(InclusDans inclusDans, Object data);
 
-    Object visit(AppartientA appartientA);
+    Object visit(AppartientA appartientA, Object data);
 
-    Object visit(Plus plus);
+    Object visit(Plus plus, Object data);
 
-    Object visit(Moins moins);
+    Object visit(Moins moins, Object data);
 
-    Object visit(Cardinalite cardinalite);
+    Object visit(Cardinalite cardinalite, Object data);
 
-    Object visit(Ensemble ensemble);
+    Object visit(Ensemble ensemble, Object data);
 
-    Object visit(Inegal inegal);
+    Object visit(Inegal inegal, Object data);
 
-    Object visit(Egal egal);
+    Object visit(Egal egal, Object data);
 
-    Object visit(Egalite egalite);
+    Object visit(Egalite egalite, Object data);
 
-    Object visit(Inegalite inegalite);
+    Object visit(Inegalite inegalite, Object data);
 
-    Object visit(Plusgrandegalque plusgrandegalque);
+    Object visit(Plusgrandegalque plusgrandegalque, Object data);
 
-    Object visit(Plusgrandque plusgrandque);
+    Object visit(Plusgrandque plusgrandque, Object data);
 
-    Object visit(Pluspetitegalque pluspetitegalque);
+    Object visit(Pluspetitegalque pluspetitegalque, Object data);
 
-    Object visit(Pluspetitque pluspetitque);
+    Object visit(Pluspetitque pluspetitque, Object data);
 }

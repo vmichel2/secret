@@ -10,6 +10,8 @@ import pExpr.pNonTerminal.pSousExpr.pExprLogique.Oulogique;
 import pExpr.pNonTerminal.pSousExpr.pExprLogique.QuelqueSoit;
 import pExpr.pTerminal.Entier;
 import pExpr.pTerminal.Litteral;
+import pVisiteurs.Validateur;
+import pVisiteurs.Visiteur;
 
 public class Main {
     public static void main(String args[]) {
@@ -56,6 +58,9 @@ public class Main {
         System.out.println();
         System.out.println("================================");
         System.out.println();
+
+        Visiteur v = new Validateur();
+        exemple1.Accepte(v, new Object());
 
     }
 
