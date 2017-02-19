@@ -165,11 +165,8 @@ public class Validateur implements Visiteur {
 
     @Override
     public Object visit(Inegal inegal, Object data) {
-        ArrayList intorstr= new ArrayList<String>();
-        intorstr.add("litteral");
-        intorstr.add("entier");
-        if(intorstr.contains(inegal.getExprg().Accepte(this,data)) &&
-                intorstr.contains(inegal.getExprd().Accepte(this,data))){
+        if (inegal.getExprg().Accepte(this,data)=="ensemble" &&
+            inegal.getExprd().Accepte(this,data)=="ensemble") {
             return "booleen";
         }
         return "ERROR";

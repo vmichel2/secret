@@ -27,6 +27,9 @@ public class Ensemble extends NonTerminal {
         }
 
     }
+    public int getSize(){
+        return ensemble.length;
+    }
 }
 
 // Ensemble	::=	{ ExprArith (, ExprArith)* }

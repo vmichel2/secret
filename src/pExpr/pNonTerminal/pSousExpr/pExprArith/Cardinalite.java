@@ -14,6 +14,7 @@ public class Cardinalite extends ExprArith {
         return v.visit(this, data);
     }
 
+
     public void afficher(String prefixe) {
 
         System.out.println(prefixe + "Cardinalite");

@@ -8,7 +8,7 @@ public abstract class ExpressionEnsembliste extends NonTerminal {
     protected Expression expr2;
     public ExpressionEnsembliste(Expression expr, Expression expr2){
         this.expr=expr;
-        this.expr2=expr;
+        this.expr2=expr2;
     }
 
     public void afficher(String prefixe) {

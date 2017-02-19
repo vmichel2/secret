@@ -12,6 +12,8 @@ public abstract class Expression {
 
 
     public abstract Object Accepte(Visiteur v, Object data);
+
+
 }
 // Pour chaque terminal ou non term : constructeur, affichage et visite -> 3 fcts
 // code métier dans le visiteur
