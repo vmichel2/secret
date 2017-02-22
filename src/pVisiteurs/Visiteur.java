@@ -15,50 +15,57 @@ import pExpr.pTerminal.Booleen;
 import pExpr.pTerminal.Entier;
 import pExpr.pTerminal.Litteral;
 
-public interface Visiteur {
-    Object visit(Litteral litteral, Object data);
+public abstract class Visiteur {
 
-    Object visit(Entier entier, Object data);
+    private static Visiteur instance = null;
 
-    Object visit(Booleen booleen, Object data);
+    protected Visiteur() {}
 
-    Object visit(Etlogique etlogique, Object data);
+    public synchronized static Visiteur getInstance() { return null; }
 
-    Object visit(IlExiste ilExiste, Object data);
+    public abstract Object visit(Litteral litteral, Object data);
 
-    Object visit(Non non, Object data);
+    public abstract Object visit(Entier entier, Object data);
 
-    Object visit(Oulogique oulogique, Object data);
+    public abstract Object visit(Booleen booleen, Object data);
 
-    Object visit(QuelqueSoit quelqueSoit, Object data);
+    public abstract Object visit(Etlogique etlogique, Object data);
 
-    Object visit(InclusStricteDans inclusStricteDans, Object data);
+    public abstract Object visit(IlExiste ilExiste, Object data);
 
-    Object visit(InclusDans inclusDans, Object data);
+    public abstract Object visit(Non non, Object data);
 
-    Object visit(AppartientA appartientA, Object data);
+    public abstract Object visit(Oulogique oulogique, Object data);
 
-    Object visit(Plus plus, Object data);
+    public abstract Object visit(QuelqueSoit quelqueSoit, Object data);
 
-    Object visit(Moins moins, Object data);
+    public abstract Object visit(InclusStricteDans inclusStricteDans, Object data);
 
-    Object visit(Cardinalite cardinalite, Object data);
+    public abstract Object visit(InclusDans inclusDans, Object data);
 
-    Object visit(Ensemble ensemble, Object data);
+    public abstract Object visit(AppartientA appartientA, Object data);
 
-    Object visit(Inegal inegal, Object data);
+    public abstract Object visit(Plus plus, Object data);
 
-    Object visit(Egal egal, Object data);
+    public abstract Object visit(Moins moins, Object data);
 
-    Object visit(Egalite egalite, Object data);
+    public abstract Object visit(Cardinalite cardinalite, Object data);
 
-    Object visit(Inegalite inegalite, Object data);
+    public abstract Object visit(Ensemble ensemble, Object data);
 
-    Object visit(Plusgrandegalque plusgrandegalque, Object data);
+    public abstract Object visit(Inegal inegal, Object data);
 
-    Object visit(Plusgrandque plusgrandque, Object data);
+    public abstract Object visit(Egal egal, Object data);
 
-    Object visit(Pluspetitegalque pluspetitegalque, Object data);
+    public abstract Object visit(Egalite egalite, Object data);
 
-    Object visit(Pluspetitque pluspetitque, Object data);
+    public abstract Object visit(Inegalite inegalite, Object data);
+
+    public abstract Object visit(Plusgrandegalque plusgrandegalque, Object data);
+
+    public abstract Object visit(Plusgrandque plusgrandque, Object data);
+
+    public abstract Object visit(Pluspetitegalque pluspetitegalque, Object data);
+
+    public abstract Object visit(Pluspetitque pluspetitque, Object data);
 }

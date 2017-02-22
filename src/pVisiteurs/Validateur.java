@@ -19,32 +19,37 @@ import pExpr.pTerminal.Terminal;
 
 import java.util.ArrayList;
 
-public class Validateur implements Visiteur {
+public class Validateur extends Visiteur {
 
     /*
-    Data contient le type de l'objet retourné par le visiteur, par exemple si on a un " true - 42 ", le visiteur renverra :
-    "booleen" - "entier" pour chacunes des feuilles, puis ERROR pour la soustraction en elle même,
-    car on ne peut pas soustraire un entier à un booléen, le code ERROR remontera jusqu'au noeud racine.
+    Data contient le type de l'objet retournï¿½ par le visiteur, par exemple si on a un " true - 42 ", le visiteur renverra :
+    "booleen" - "entier" pour chacunes des feuilles, puis ERROR pour la soustraction en elle mï¿½me,
+    car on ne peut pas soustraire un entier ï¿½ un boolï¿½en, le code ERROR remontera jusqu'au noeud racine.
      */
 
+    private static Visiteur instance = null;
 
+    private Validateur() {}
 
-    @Override
+    public synchronized static Visiteur getInstance() {
+        if (instance == null) {
+            instance = new Validateur();
+        }
+        return instance;
+    }
+
     public Object visit(Litteral litteral, Object data) {
         return "litteral";
     }
 
-    @Override
     public Object visit(Entier entier, Object data) {
         return "entier";
     }
 
-    @Override
     public Object visit(Booleen booleen, Object data) {
         return "booleen";
     }
 
-    @Override
     public Object visit(Etlogique etlogique, Object data) {
 
         if (etlogique.getExpr().Accepte(this, data)=="booleen" &&
@@ -55,12 +60,10 @@ public class Validateur implements Visiteur {
     }
 
     //Todo
-    @Override
     public Object visit(IlExiste ilExiste, Object data) {
         return "booleen";
     }
 
-    @Override
     public Object visit(Non non, Object data) {
         if (non.getExpr().Accepte(this, data)=="booleen" ) {
             data = "booleen";
@@ -70,7 +73,6 @@ public class Validateur implements Visiteur {
         return data;
     }
 
-    @Override
     public Object visit(Oulogique oulogique, Object data) {
         if (oulogique.getExpr().Accepte(this, data)=="booleen" &&
             oulogique.getExpr2().Accepte(this, data)=="booleen") {
@@ -80,13 +82,11 @@ public class Validateur implements Visiteur {
     }
 
     //Todo
-    @Override
     public Object visit(QuelqueSoit quelqueSoit, Object data) {
         return "booleen";
     }
 
 
-    @Override
     public Object visit(InclusStricteDans inclusStricteDans, Object data) {
         if (inclusStricteDans.getExpr().Accepte(this,data)=="ensemble" &&
             inclusStricteDans.getExpr2().Accepte(this,data)=="ensemble"){
@@ -97,7 +97,6 @@ public class Validateur implements Visiteur {
     }
 
 
-    @Override
     public Object visit(InclusDans inclusDans, Object data) {
         if (inclusDans.getExpr().Accepte(this,data)=="ensemble" &&
             inclusDans.getExpr2().Accepte(this,data)=="ensemble"){
@@ -107,20 +106,18 @@ public class Validateur implements Visiteur {
     }
 
 
-    @Override
     public Object visit(AppartientA appartientA, Object data) {
         ArrayList terminaux= new ArrayList<String>();
         terminaux.add("litteral");
         terminaux.add("entier");
         terminaux.add("booleen");
-        if (terminaux.contains(appartientA.getExpr().Accepte(this,data)) && // si on a bien un terminal à gauche
+        if (terminaux.contains(appartientA.getExpr().Accepte(this,data)) && // si on a bien un terminal ï¿½ gauche
             appartientA.getExpr2().Accepte(this,data)=="ensemble"){
             return "booleen";
         }
         return "ERROR";
     }
 
-    @Override
     public Object visit(Plus plus, Object data) {
         ArrayList intorstr= new ArrayList<String>();
         intorstr.add("litteral");
@@ -133,7 +130,6 @@ public class Validateur implements Visiteur {
     }
 
 
-    @Override
     public Object visit(Moins moins, Object data) {
         ArrayList intorstr= new ArrayList<String>();
         intorstr.add("litteral");
@@ -145,7 +141,6 @@ public class Validateur implements Visiteur {
         return "ERROR";
     }
 
-    @Override
     public Object visit(Cardinalite cardinalite, Object data) {
         if (cardinalite.getExpr().Accepte(this,data)=="ensemble") {
             return "entier";
@@ -153,7 +148,6 @@ public class Validateur implements Visiteur {
         return "ERROR";
     }
 
-    @Override
     public Object visit(Ensemble ensemble, Object data) {
             for (Expression e : ensemble.getEnsemble()){
                 if (!( e.Accepte(this,data)=="entier")){
@@ -163,7 +157,6 @@ public class Validateur implements Visiteur {
             return "ensemble";
     }
 
-    @Override
     public Object visit(Inegal inegal, Object data) {
         if (inegal.getExprg().Accepte(this,data)=="ensemble" &&
             inegal.getExprd().Accepte(this,data)=="ensemble") {
@@ -172,7 +165,6 @@ public class Validateur implements Visiteur {
         return "ERROR";
     }
 
-    @Override
     public Object visit(Egal egal, Object data) {
         if (egal.getExprg().Accepte(this,data)=="ensemble" &&
             egal.getExprd().Accepte(this,data)=="ensemble") {
@@ -181,7 +173,6 @@ public class Validateur implements Visiteur {
         return "ERROR";
     }
 
-    @Override
     public Object visit(Egalite egalite, Object data) {
         ArrayList intorstrorens= new ArrayList<String>();
         intorstrorens.add("litteral");
@@ -194,7 +185,6 @@ public class Validateur implements Visiteur {
         return "ERROR";
     }
 
-    @Override
     public Object visit(Inegalite inegalite, Object data) {
         ArrayList intorstr= new ArrayList<String>();
         intorstr.add("litteral");
@@ -206,7 +196,6 @@ public class Validateur implements Visiteur {
         return "ERROR";
     }
 
-    @Override
     public Object visit(Plusgrandegalque plusgrandegalque, Object data) {
         ArrayList intorstr= new ArrayList<String>();
         intorstr.add("litteral");
@@ -219,7 +208,6 @@ public class Validateur implements Visiteur {
     }
 
 
-    @Override
     public Object visit(Plusgrandque plusgrandque, Object data) {
         ArrayList intorstr= new ArrayList<String>();
         intorstr.add("litteral");
@@ -231,7 +219,6 @@ public class Validateur implements Visiteur {
         return "ERROR";
     }
 
-    @Override
     public Object visit(Pluspetitegalque pluspetitegalque, Object data) {
         ArrayList intorstr= new ArrayList<String>();
         intorstr.add("litteral");
@@ -243,7 +230,6 @@ public class Validateur implements Visiteur {
         return "ERROR";
     }
 
-    @Override
     public Object visit(Pluspetitque pluspetitque, Object data) {
         ArrayList intorstr= new ArrayList<String>();
         intorstr.add("litteral");
