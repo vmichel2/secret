@@ -18,7 +18,7 @@ public class Entier extends Terminal {
         return v.visit(this, data);
     }
     public void afficher(String prefixe) {
-        System.out.println(prefixe + "Entier : " + this.entier);
+        System.out.println(prefixe + "Entier : " + entier);
     }
 
 }

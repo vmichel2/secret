@@ -15,10 +15,11 @@ public class Litteral extends Terminal {
     }
 
     public void afficher(String prefixe) {
-        System.out.println(prefixe + "Litteral : " + this.litteral);
+        System.out.println(prefixe + "Litteral : " + litteral);
     }
 
     public String getLitteral() {
         return litteral;
     }
+
 }

@@ -18,7 +18,7 @@ public class Booleen extends Terminal {
         return v.visit(this, data);
     }
     public void afficher(String prefixe) {
-        System.out.println(prefixe + "Booléen : " + this.booleen);
+        System.out.println(prefixe + "Booléen : " + booleen);
     }
 
 }

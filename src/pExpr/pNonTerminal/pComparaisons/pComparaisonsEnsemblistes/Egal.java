@@ -15,7 +15,7 @@ public class Egal extends ComparaisonEnsembliste {
 
     public void afficher(String prefixe) {
 
-        System.out.println(prefixe + "C =");
+        System.out.println(prefixe + "Egal");
         this.exprg.afficher(prefixe+"\t");
         this.exprd.afficher(prefixe+"\t");
     }

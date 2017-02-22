@@ -15,7 +15,7 @@ public class AppartientA extends ExpressionEnsembliste {
 
     public void afficher(String prefixe) {
 
-        System.out.println(prefixe + "InclusDans");
+        System.out.println(prefixe + "AppartientA");
         expr.afficher(prefixe+"\t");
         expr2.afficher(prefixe+"\t");
     }

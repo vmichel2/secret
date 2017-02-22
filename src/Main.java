@@ -16,6 +16,7 @@ import pExpr.pNonTerminal.pSousExpr.pExprLogique.QuelqueSoit;
 import pExpr.pTerminal.Entier;
 import pExpr.pTerminal.Litteral;
 import pVisiteurs.Evaluateur;
+import pVisiteurs.PrettyPrinter;
 import pVisiteurs.Validateur;
 import pVisiteurs.Visiteur;
 
@@ -99,10 +100,24 @@ public class Main {
         System.out.println("13 "+exemple13.Accepte(ve,new Object())); // renvoie 1, normal {49} contient 1 élément
 
 
+        Visiteur ve2 = new PrettyPrinter();
+        Object o1 = exemple1.Accepte(ve2, new Object());
+        System.out.println(o1);
+
+        Object o2 = exemple2.Accepte(ve2, new Object());
+        System.out.println(o2);
+
+        Object o3 = exemple3.Accepte(ve2, new Object());
+        System.out.println(o3);
+
+        Object o4 = exemple4.Accepte(ve2, new Object());
+        System.out.println(o4);
+
     }
 
     /*
     Todo : Visiteur pretty-printer
     Todo : finir Visiteur évaluateur
      */
+
 }

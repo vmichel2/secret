@@ -15,7 +15,7 @@ public class Inegal extends ComparaisonEnsembliste {
 
     public void afficher(String prefixe) {
 
-        System.out.println(prefixe + "C !=");
+        System.out.println(prefixe + "Inegal");
         this.exprg.afficher(prefixe+"\t");
         this.exprd.afficher(prefixe+"\t");
     }
